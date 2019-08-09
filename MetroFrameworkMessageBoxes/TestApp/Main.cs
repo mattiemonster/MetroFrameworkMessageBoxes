@@ -35,7 +35,6 @@ namespace TestApp
                 return;
 
             string input;
-
             DialogResult result;
 
             if (inputBoxTheme.SelectedIndex == 0)
