@@ -46,8 +46,16 @@
             this.msgBoxTab = new MetroFramework.Controls.MetroTabPage();
             this.textBoxMsgTab = new MetroFramework.Controls.MetroTabPage();
             this.inputBoxMessage = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.textBoxMsgTitle = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.textBoxMsgText = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.textBoxMsgTheme = new MetroFramework.Controls.MetroComboBox();
+            this.showTextBoxMsgButton = new MetroFramework.Controls.MetroButton();
             this.tabs.SuspendLayout();
             this.msgBoxTab.SuspendLayout();
+            this.textBoxMsgTab.SuspendLayout();
             this.inputBoxMessage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,9 +205,9 @@
             this.tabs.Controls.Add(this.msgBoxTab);
             this.tabs.Controls.Add(this.textBoxMsgTab);
             this.tabs.Controls.Add(this.inputBoxMessage);
-            this.tabs.Location = new System.Drawing.Point(23, 63);
+            this.tabs.Location = new System.Drawing.Point(25, 65);
             this.tabs.Name = "tabs";
-            this.tabs.SelectedIndex = 0;
+            this.tabs.SelectedIndex = 1;
             this.tabs.Size = new System.Drawing.Size(947, 464);
             this.tabs.TabIndex = 15;
             this.tabs.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -224,6 +232,13 @@
             // 
             // textBoxMsgTab
             // 
+            this.textBoxMsgTab.Controls.Add(this.metroLabel1);
+            this.textBoxMsgTab.Controls.Add(this.textBoxMsgTitle);
+            this.textBoxMsgTab.Controls.Add(this.metroLabel6);
+            this.textBoxMsgTab.Controls.Add(this.textBoxMsgText);
+            this.textBoxMsgTab.Controls.Add(this.metroLabel9);
+            this.textBoxMsgTab.Controls.Add(this.textBoxMsgTheme);
+            this.textBoxMsgTab.Controls.Add(this.showTextBoxMsgButton);
             this.textBoxMsgTab.HorizontalScrollbarBarColor = true;
             this.textBoxMsgTab.Location = new System.Drawing.Point(4, 35);
             this.textBoxMsgTab.Name = "textBoxMsgTab";
@@ -251,6 +266,77 @@
             this.inputBoxMessage.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.inputBoxMessage.VerticalScrollbarBarColor = true;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 4);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel1.TabIndex = 7;
+            this.metroLabel1.Text = "Title";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textBoxMsgTitle
+            // 
+            this.textBoxMsgTitle.Location = new System.Drawing.Point(3, 26);
+            this.textBoxMsgTitle.Name = "textBoxMsgTitle";
+            this.textBoxMsgTitle.Size = new System.Drawing.Size(936, 23);
+            this.textBoxMsgTitle.TabIndex = 6;
+            this.textBoxMsgTitle.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(3, 52);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel6.TabIndex = 10;
+            this.metroLabel6.Text = "Message";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textBoxMsgText
+            // 
+            this.textBoxMsgText.Location = new System.Drawing.Point(3, 74);
+            this.textBoxMsgText.Multiline = true;
+            this.textBoxMsgText.Name = "textBoxMsgText";
+            this.textBoxMsgText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxMsgText.Size = new System.Drawing.Size(936, 261);
+            this.textBoxMsgText.TabIndex = 8;
+            this.textBoxMsgText.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 338);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel9.TabIndex = 12;
+            this.metroLabel9.Text = "Theme";
+            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textBoxMsgTheme
+            // 
+            this.textBoxMsgTheme.FormattingEnabled = true;
+            this.textBoxMsgTheme.ItemHeight = 23;
+            this.textBoxMsgTheme.Items.AddRange(new object[] {
+            "Light",
+            "Dark"});
+            this.textBoxMsgTheme.Location = new System.Drawing.Point(3, 360);
+            this.textBoxMsgTheme.Name = "textBoxMsgTheme";
+            this.textBoxMsgTheme.Size = new System.Drawing.Size(936, 29);
+            this.textBoxMsgTheme.TabIndex = 9;
+            this.textBoxMsgTheme.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // showTextBoxMsgButton
+            // 
+            this.showTextBoxMsgButton.Location = new System.Drawing.Point(3, 395);
+            this.showTextBoxMsgButton.Name = "showTextBoxMsgButton";
+            this.showTextBoxMsgButton.Size = new System.Drawing.Size(936, 23);
+            this.showTextBoxMsgButton.TabIndex = 11;
+            this.showTextBoxMsgButton.Text = "Show Message";
+            this.showTextBoxMsgButton.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.showTextBoxMsgButton.Click += new System.EventHandler(this.ShowTextBoxMsgButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +352,8 @@
             this.tabs.ResumeLayout(false);
             this.msgBoxTab.ResumeLayout(false);
             this.msgBoxTab.PerformLayout();
+            this.textBoxMsgTab.ResumeLayout(false);
+            this.textBoxMsgTab.PerformLayout();
             this.inputBoxMessage.ResumeLayout(false);
             this.inputBoxMessage.PerformLayout();
             this.ResumeLayout(false);
@@ -291,6 +379,13 @@
         private MetroFramework.Controls.MetroTabPage msgBoxTab;
         private MetroFramework.Controls.MetroTabPage textBoxMsgTab;
         private MetroFramework.Controls.MetroTabPage inputBoxMessage;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox textBoxMsgTitle;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroTextBox textBoxMsgText;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroComboBox textBoxMsgTheme;
+        private MetroFramework.Controls.MetroButton showTextBoxMsgButton;
     }
 }
 

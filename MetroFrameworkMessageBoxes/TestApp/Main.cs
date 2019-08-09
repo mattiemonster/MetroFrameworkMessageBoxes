@@ -15,6 +15,7 @@ namespace TestApp
         {
             msgBoxTheme.SelectedIndex = 0;
             inputBoxTheme.SelectedIndex = 0;
+            textBoxMsgTheme.SelectedIndex = 0;
         }
 
         private void ShowMsgButton_Click(object sender, EventArgs e)
@@ -48,6 +49,17 @@ namespace TestApp
 
             if (result == DialogResult.OK)
                 inputText.Text = input;
+        }
+
+        private void ShowTextBoxMsgButton_Click(object sender, EventArgs e)
+        {
+            if (textBoxMsgTheme.SelectedIndex < 0 || textBoxMsgTheme.SelectedIndex > 1)
+                return;
+
+            if (textBoxMsgTheme.SelectedIndex == 0)
+                MetroTextBoxMessage.Show(textBoxMsgTitle.Text, textBoxMsgText.Text, MetroMessageTheme.Light);
+            else
+                MetroTextBoxMessage.Show(textBoxMsgTitle.Text, textBoxMsgText.Text, MetroMessageTheme.Dark);
         }
     }
 }
