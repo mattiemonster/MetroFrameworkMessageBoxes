@@ -9,6 +9,7 @@ namespace TestApp
         public Main()
         {
             InitializeComponent();
+            tabs.SelectedIndex = 0;
         }
 
         private void Main_Load(object sender, EventArgs e)
